@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Inicio</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -24,13 +24,13 @@
     <thead>
         <tr>
             <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Last Name</a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Apellidos</a>
             </th>
             <th>
-                First Name
+                 Nombre
             </th>
             <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Enrollment Date</a>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Fecha de inscripción</a>
             </th>
             <th></th>
         </tr>
@@ -49,9 +49,9 @@
                     @Html.DisplayFor(modelItem => item.EnrollmentDate)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    <a class="btn btn-outline-success" asp-action="Editar" asp-route-id="@item.ID">Editar</a> |
+                    <a class="btn btn-outline-success" asp-action="Detalles" asp-route-id="@item.ID">Detalles</a> |
+                    <a class="btn btn-outline-success" asp-action="Eliminar" asp-route-id="@item.ID">Eliminar</a>
                 </td>
             </tr>
         }
